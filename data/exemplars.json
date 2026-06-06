@@ -1,0 +1,10 @@
+[
+  {
+    "numista_id": 1234,
+    "label": "Illustrative reference (synthetic id) — replace with verified data",
+    "grade": 63,
+    "strike_type": "MS",
+    "notes": "Placeholder entry so retrieval can be exercised end-to-end. numista_id 1234 is not a real mapping; replace these with verified graded references keyed by real Numista type ids.",
+    "source": "placeholder"
+  }
+]

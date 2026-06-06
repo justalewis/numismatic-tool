@@ -1,0 +1,22 @@
+# Fly.io configuration. Change `app` to your chosen Fly app name (or let
+# `fly launch` set it). Secrets are NOT stored here — set them with:
+#   fly secrets set ANTHROPIC_API_KEY=sk-ant-...
+#   fly secrets set NUMISTA_API_KEY=...        # optional
+
+app = "numismatic-tool"
+primary_region = "iad"
+
+[build]
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  # Scale to zero when idle to keep costs near nothing; first request after idle
+  # pays a short cold start. Set min_machines_running = 1 to keep one warm.
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"
